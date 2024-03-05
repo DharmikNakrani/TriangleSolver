@@ -48,7 +48,7 @@ namespace TestClass
             ClassicAssert.AreEqual(expected, actual);
         }
 
-        //test caes 2
+        //test caes 3
         [Test]
         public void IsoscelesTriangle_Input50and20and50_OutputIsoscelesTriangle()
         {
@@ -66,7 +66,7 @@ namespace TestClass
             ClassicAssert.AreEqual(expected, actual);
         }
 
-        //test caes 2
+        //test caes 4
         [Test]
         public void IsoscelesTriangle_Input30and60and60_OutputIsoscelesTriangle()
         {
@@ -83,6 +83,98 @@ namespace TestClass
             // Assert
             ClassicAssert.AreEqual(expected, actual);
         }
+
+        //test caes 5
+        [Test]
+        public void ScaleneTriangle_Input12and25and34_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 12;
+            int side2 = 25;
+            int side3 = 34;
+
+            string expected = "Scalene triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 6
+        [Test]
+        public void ScaleneTriangle_Input33and22and14_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 33;
+            int side2 = 22;
+            int side3 = 14;
+
+            string expected = "Scalene triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 7
+        [Test]
+        public void ScaleneTriangle_Input22and15and34_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 22;
+            int side2 = 15;
+            int side3 = 34;
+
+            string expected = "Scalene triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 8
+        [Test]
+        public void ScaleneTriangle_Input42and51and30_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 42;
+            int side2 = 51;
+            int side3 = 30;
+
+            string expected = "Scalene triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 9
+        [Test]
+        public void ScaleneTriangle_Input15and22and21_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 15;
+            int side2 = 22;
+            int side3 = 21;
+
+            string expected = "Scalene triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+       
     }    
 }
 
