@@ -12,17 +12,19 @@ namespace TestClass
 {
     public class Class1
     {
+        //test caes 
         [Test]
-        public void ValidEquilateralTriangleTest()
+        public void EquilateteralTriangle_Input10and10and10_OutputEquilateralTriangle()
         {
-            var side1 = 10;
-            var side2 = 10;
-            var side3 = 10;
+            //Arrange
+            int side1 = 10;
+            int side2 = 10;
+            int side3 = 10;
 
-            var expected = "Equilateral triangle";
+            string expected = "Equilateral triangle";
 
-            // Create an instance of your triangle class with sides for a valid equilateral triangle
-            var actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
 
             // Assert
             ClassicAssert.AreEqual(expected, actual);
