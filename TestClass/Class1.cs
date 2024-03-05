@@ -12,7 +12,7 @@ namespace TestClass
 {
     public class Class1
     {
-        //test caes 
+        //test caes 1
         [Test]
         public void EquilateteralTriangle_Input10and10and10_OutputEquilateralTriangle()
         {
@@ -29,5 +29,60 @@ namespace TestClass
             // Assert
             ClassicAssert.AreEqual(expected, actual);
         }
-    }
+
+        //test caes 2
+        [Test]
+        public void IsoscelesTriangle_Input40and40and10_OutputIsoscelesTriangle()
+        {
+            //Arrange
+            int side1 = 40;
+            int side2 = 40;
+            int side3 = 10;
+
+            string expected = "Isosceles triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 2
+        [Test]
+        public void IsoscelesTriangle_Input50and20and50_OutputIsoscelesTriangle()
+        {
+            //Arrange
+            int side1 = 50;
+            int side2 = 20;
+            int side3 = 50;
+
+            string expected = "Isosceles triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 2
+        [Test]
+        public void IsoscelesTriangle_Input30and60and60_OutputIsoscelesTriangle()
+        {
+            //Arrange
+            int side1 = 30;
+            int side2 = 60;
+            int side3 = 60;
+
+            string expected = "Isosceles triangle";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+    }    
 }
+
