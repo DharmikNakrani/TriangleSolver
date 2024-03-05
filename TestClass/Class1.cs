@@ -176,7 +176,7 @@ namespace TestClass
 
         //test caes 10
         [Test]
-        public void ScaleneTriangle_Input0and12and20_OutputScaleneTriangle()
+        public void ZeroLengthTriangle_Input0and12and20_OutputZeroLengthTriangle()
         {
             //Arrange
             int side1 = 0;
@@ -194,7 +194,7 @@ namespace TestClass
 
         //test caes 11
         [Test]
-        public void ScaleneTriangle_Input12and0and0_OutputScaleneTriangle()
+        public void ZeroLengthTriangle_Input12and0and0_OutputZeroLengthTriangle()
         {
             //Arrange
             int side1 = 12;
@@ -212,7 +212,7 @@ namespace TestClass
 
         //test caes 12
         [Test]
-        public void ScaleneTriangle_Input0and0and0_OutputScaleneTriangle()
+        public void ZeroLengthTriangle_Input0and0and0_OutputZeroLengthTriangle()
         {
             //Arrange
             int side1 = 0;
@@ -220,6 +220,60 @@ namespace TestClass
             int side3 = 0;
 
             string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 13
+        [Test]
+        public void InvalidResponse_Input10and10and20_OutputInvalidResponse()
+        {
+            //Arrange
+            int side1 = 10;
+            int side2 = 10;
+            int side3 = 20;
+
+            string expected = "INVALID!!";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 14
+        [Test]
+        public void InvalidResponse_Input10and20and30_OutputInvalidResponse()
+        {
+            //Arrange
+            int side1 = 10;
+            int side2 = 20;
+            int side3 = 30;
+
+            string expected = "INVALID!!";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 15
+        [Test]
+        public void InvalidResponse_Input20and40and60_OutputInvalidResponse()
+        {
+            //Arrange
+            int side1 = 20;
+            int side2 = 40;
+            int side3 = 60;
+
+            string expected = "INVALID!!";
 
             // Act
             string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
