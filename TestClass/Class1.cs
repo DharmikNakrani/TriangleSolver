@@ -174,7 +174,59 @@ namespace TestClass
             ClassicAssert.AreEqual(expected, actual);
         }
 
-       
+        //test caes 10
+        [Test]
+        public void ScaleneTriangle_Input0and12and20_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 0;
+            int side2 = 12;
+            int side3 = 20;
+
+            string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 11
+        [Test]
+        public void ScaleneTriangle_Input12and0and0_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 12;
+            int side2 = 0;
+            int side3 = 0;
+
+            string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
+
+        //test caes 12
+        [Test]
+        public void ScaleneTriangle_Input0and0and0_OutputScaleneTriangle()
+        {
+            //Arrange
+            int side1 = 0;
+            int side2 = 0;
+            int side3 = 0;
+
+            string expected = "Invalid Triangle - a zero has been detected";
+
+            // Act
+            string actual = Triangle.AnalyzeTriangle(side1, side2, side3);
+
+            // Assert
+            ClassicAssert.AreEqual(expected, actual);
+        }
     }    
 }
 
